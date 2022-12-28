@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>count down timer </title>
+	<style type="text/css">
+		.timer{
+			text-align: center;
+			height: 95px;
+			width: 100px;
+			float: left;
+			margin: auto;
+			align-items: center;
+			padding: 20px;
+
+		}
+		.timer input{
+			width: 50%;
+			height: 50%;
+			font-size: 50px;
+			text-align: center;
+		}
+		.timer label{
+			font-size: 25px;
+			color: blue;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>hurry up! book your seat now:</h1>
+<h2 id="enddate">'27 december 2022 04:58 PM'</h2>
+
+<img id="img" src="t.jpg" style="height:50%; width: 50%; display: none;"alt="myimage">
+
+
+
+<div id="manoj" style="align-items: center; background-color: aquamarine; height:100px; weith:100px;">
+	<div class="timer">
+		<input type="text" name="" value="0" readonly>
+		<label>days</label>
+		
+	</div>
+
+<div class="timer">
+		<input type="text" name="" value="0"readonly>
+		<label>hour</label>
+		
+	</div>
+<div class="timer">
+		<input type="text" name="" value="0"readonly>
+		<label>minute</label>
+		
+	</div>
+<div class="timer">
+		<input type="text" name="" value="0" readonly>
+		<label>second</label>
+		
+	</div>
+	
+	<script type="text/javascript">
+		const enddate='27 December 2022 05:02 PM'
+		document.getElementById('enddate').innerHTML=enddate;
+		const inputs=document.querySelectorAll("input")
+		function timer(){
+			const end=new Date(enddate);
+			const now=new Date();
+			const diff=(end-now)/1000;
+			if (diff<0) {
+
+				document.getElementById('manoj').style.display='none';
+				document.getElementById('img').style.display='block';
+			}
+
+
+
+			inputs[0].value=Math.floor(diff/3600/24);
+			inputs[1].value=Math.floor((diff/3600)%24);
+			inputs[2].value=Math.floor((diff/60)%60);
+			inputs[3].value=Math.floor(diff%60);
+		}
+		timer()
+		setInterval(timer,1000);
+		
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

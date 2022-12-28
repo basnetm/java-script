@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>click me</title>
+
+</head>
+<body>
+<button onclick="hideshow()">here i'm</button>
+<h1 id="header" style="height: 70px; border:5px solid black; margin: 15px; padding: 20px;">hellow </h1>
+	<script type="text/javascript">
+		var div=document.getElementByID('header');
+		var display=0;
+		function hideshow(){
+			if (display==1){
+				div.style.display='block';
+				display=0;
+			}
+			else{
+				div.style.display='none';
+				display=1;
+			}
+		}
+	</script>
+
+</body>
+</html>

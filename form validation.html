@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<style type="text/css">
+		.manoj{
+			border: 1px;
+		}
+	</style>
+	
+	
+
+		
+
+</head>
+<body>
+	<h1>welcome to form regestration</h1>
+	<form action="#" class="manoj" name="myform" method="post" onsubmit="return validateform()">
+
+		<div class="formdesign" id="name" >
+			name:<input type="text" name="f1name" required><b><span class="formerror"></span></b>
+		</div>
+
+		<!--<div class="formdesign" id="email" >
+			email:<input type="email" name="femail" required><b><span class="formerror"></span></b>
+		</div>
+
+		<div class="formdesign" id="phone" >
+			phone:<input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+		</div>
+
+		<div class="formdesign" id="password" >
+			password:<input type="password" name="fpassword" required><b><span class="formerror"></span></b>
+		</div>
+
+		<div class="formdesign" id="cpassword" >
+			confirm password:<input type="password" name="cpassword" required><b><span class="formerror"></span></b>
+		</div>-->
+		<input  class ="but" type="submit" value="submit" >
+	</form>
+	
+
+<script>
+		/*function clearErrors() {
+			errors=document.getElementsByClassName('formerror');
+			for(let item of errors)
+			{
+				item.innerHTML="";
+			}
+		}
+
+		function seterror(id,error) {
+			element=document.getElementByID(id);
+			element.getElementsByClassName('formerror')[0].innerHTML=error;
+		}*/
+		function validateform(){
+		
+			var returnval=true;
+			/*clearErrors();*/
+			var name=document.forms['myform']["f1name"].value;
+			
+			if (name.length<5) {
+				alert("error");
+				/*seterror("name","*length of name is too short");*/
+				returnval false;
+			}
+			/*if (name.length==0) {
+				seterror("name","*naem cant be blank");
+				returnval false;
+			}
+			var email=document.forms['myform']["femail"].value;
+			if (email.length>15) {
+				seterror("email","*email is too long");
+				returnval false;
+			}
+			var phone=document.forms['myform']["fphone"].value;
+			if (phone.length!=10) {
+				seterror("phone","*enter a valid number");
+				returnval false;
+			}
+			var password=document.forms['myform']["fpassword"].value;
+			if (password.length<6) {
+				setErrors("password"."*too short");
+				returnval false;
+			}
+			var cpassword=document.forms['myform']["cpassword"].value;
+			if (cpassword!=password) {
+				seterror("cpassword","*check your password");
+				returnval false;
+			}*/
+			return returnval;
+		}
+
+
+
+
+
+
+
+
+	</script>
+	
+
+</body>
+</html>
